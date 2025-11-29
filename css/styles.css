@@ -1,0 +1,70 @@
+/* Modern palette and layout tweaks for Edveni Innovations */
+:root{
+  --bg:#eef6ff; /* light blue background */
+  --surface:#ffffff;
+  --accent:#0d6efd; /* bootstrap primary */
+  --muted:#6c757d;
+  --max-width:1100px;
+  --card-shadow:0 10px 30px rgba(13,38,76,0.06);
+}
+*{box-sizing:border-box}
+html{font-size:16px}
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;margin:0;background:var(--bg);color:#0b2a3a;line-height:1.6}
+.container{max-width:var(--max-width);margin:0 auto;padding:2rem}
+
+/* Typography: consistent sizes */
+h1{font-size:clamp(28px,4vw,40px);line-height:1.08;margin-bottom:.6rem}
+h2{font-size:clamp(20px,2.2vw,28px);margin-bottom:1rem}
+h3,h4,h5{color:#07263a}
+p, .lead{font-size:1rem}
+
+/* Header */
+.header-inner{padding:1rem 0}
+.brand-text{font-weight:700;color:var(--accent);font-size:1.25rem;text-decoration:none}
+.site-nav{background:rgba(13,110,253,0.06);padding:.4rem .75rem;border-radius:10px}
+.site-nav a{color:#0b3b5a;text-decoration:none;font-weight:600;padding:.25rem .4rem}
+.site-nav a:hover{color:var(--accent);background:transparent}
+
+/* Hero */
+.hero{background:linear-gradient(180deg, rgba(13,110,253,.04), rgba(255,255,255,0));padding:3.5rem 0}
+.hero-content{padding:0 1rem}
+.hero-graphic{max-width:520px;border-radius:10px}
+.hero-content h1{margin-bottom:.6rem;color:#032b45}
+.hero-content .tagline{color:var(--muted);margin-bottom:1rem}
+
+/* Section backgrounds */
+.services-section{background:linear-gradient(180deg,#d6e5f1, #aebecb);}
+.about-section{background:var(--surface)}
+.contact-section{background:linear-gradient(180deg,#d6e5f1, #aebecb);}
+
+/* Cards: Bootstrap provides base styles; add consistent look */
+.card{border:0;border-radius:12px;box-shadow:var(--card-shadow);overflow:hidden}
+.card .card-body{padding:1.6rem;display:flex;flex-direction:column}
+.card .card-title{margin-bottom:.6rem}
+.card .card-text{flex:0 0 auto}
+.card .mt-auto{margin-top:auto}
+
+.service-icon{width:64px;height:64px;display:block;margin:0 auto .75rem}
+
+/* Contact form tweaks */
+.contact-form .form-control{border:1px solid #e6eef9}
+.contact-form .form-control:focus{box-shadow:0 6px 18px rgba(13,110,253,0.08);border-color:var(--accent)}
+.contact-form .form-control.rounded-3{border-radius:12px}
+.contact-form .btn-primary{background:var(--accent);border-color:var(--accent)}
+#form-status.alert{margin-top:.5rem}
+
+/* Footer */
+.footer{background:linear-gradient(180deg,#071025,#0b2740)}
+.footer .text-white-50{color:rgba(255,255,255,0.65)!important}
+.footer a.text-white-50:hover{color:#fff!important}
+
+/* Responsive tweaks */
+@media (max-width:992px){
+  .hero-graphic{max-width:420px}
+}
+@media (max-width:720px){
+  .hero-content{padding:1rem;text-align:center}
+  .hero-graphic{display:none}
+  .header-inner{flex-direction:column;align-items:flex-start}
+  .site-nav{margin-top:.5rem}
+}
